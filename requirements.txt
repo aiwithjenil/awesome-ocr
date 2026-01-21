@@ -1,0 +1,14 @@
+pytesseract
+Pillow
+easyocr
+paddleocr
+paddlepaddle
+surya-ocr
+transformers
+torch
+torchvision
+qwen-vl-utils
+rapidocr_onnxruntime
+onnxruntime
+accelerate
+sentencepiece
