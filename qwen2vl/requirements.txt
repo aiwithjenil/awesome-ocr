@@ -1,0 +1,4 @@
+transformers
+torch
+qwen-vl-utils
+accelerate

@@ -39,31 +39,42 @@ These models, often built on the Transformer architecture, excel at complex docu
 
 ## Repository Structure
 
-The repository is organized to clearly separate the executable code from the test data.
+The repository is now structured with a dedicated folder for each OCR library/model, containing its specific code, requirements, and documentation.
 
 ```
 awesome-ocr/
-├── examples/
-│   ├── tesseract_example.py
-│   ├── easyocr_example.py
-│   ├── paddleocr_example.py
-│   ├── surya_example.py
-│   ├── florence2_example.py
-│   ├── qwen2vl_example.py
-│   └── rapidocr_example.py
+├── tesseract/
+│   ├── tesseract_ocr.py
+│   ├── requirements.txt
+│   └── README.md
+├── easyocr/
+│   ├── easyocr_ocr.py
+│   ├── requirements.txt
+│   └── README.md
+├── paddleocr/
+│   ├── paddleocr_ocr.py
+│   ├── requirements.txt
+│   └── README.md
+├── surya/
+│   ├── surya_ocr.py
+│   ├── requirements.txt
+│   └── README.md
+├── florence2/
+│   ├── florence2_ocr.py
+│   ├── requirements.txt
+│   └── README.md
+├── qwen2vl/
+│   ├── qwen2vl_ocr.py
+│   ├── requirements.txt
+│   └── README.md
+├── rapidocr/
+│   ├── rapidocr_ocr.py
+│   ├── requirements.txt
+│   └── README.md
 ├── tests/
 │   ├── simple/
-│   │   └── sample_digital.pdf
 │   ├── medium/
-│   │   ├── scanned_image.pdf
-│   │   ├── table_1.png
-│   │   └── table_2.png
 │   └── hard/
-│       ├── handwriting_1.jpg
-│       ├── handwriting_2.jpg
-│       ├── messy_form.png
-│       └── complex_doc.png
-├── requirements.txt
 └── README.md
 ```
 
@@ -89,24 +100,28 @@ We have curated a set of test documents categorized by difficulty to provide a r
     git clone https://github.com/your-username/awesome-ocr.git
     cd awesome-ocr
     ```
-2.  **Install Python dependencies:**
+2.  **Install Python dependencies for a specific model:**
+    Navigate to the model's directory and install its specific requirements.
     ```bash
+    cd tesseract
     pip install -r requirements.txt
     ```
-    *Note: Installing all dependencies, especially for the large VLM models (Florence-2, Qwen2-VL), may require a powerful machine and significant time.*
+    *Note: Installing dependencies for large VLM models (Florence-2, Qwen2-VL) may require a powerful machine and significant time.*
 
 ## Usage
 
-To run an example, pass the path to a test document to the corresponding script.
+To run an example, navigate to the model's directory and pass the path to a test document (relative to the repository root) to the corresponding script.
 
 **Example: Running EasyOCR on a Medium-difficulty document**
 
 ```bash
-python examples/easyocr_example.py tests/medium/table_1.png
+cd easyocr
+python easyocr_ocr.py ../tests/medium/table_1.png
 ```
 
 **Example: Running PaddleOCR on a Hard-difficulty document**
 
 ```bash
-python examples/paddleocr_example.py tests/hard/handwriting_1.jpg
+cd paddleocr
+python paddleocr_ocr.py ../tests/hard/handwriting_1.jpg
 ```
