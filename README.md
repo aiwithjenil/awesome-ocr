@@ -11,66 +11,50 @@ This repository serves as a comprehensive collection of code examples and test d
 
 ## OCR Landscape: Traditional vs. SOTA
 
-The field of OCR has evolved significantly, moving from rule-based systems to deep learning models, and now to powerful Vision-Language Models (VLMs) based on the Transformer architecture. This repository includes examples from both traditional and modern approaches.
+The field of OCR has evolved significantly, moving from rule-based systems to deep learning models, and now to powerful Vision-Language Models (VLMs) based on the Transformer architecture.
 
 ### Traditional and Open-Source Libraries
 
-These libraries are generally easier to set up and are highly effective for standard OCR tasks.
-
 | Library | Core Technology | Key Strengths | Use Case |
 | :--- | :--- | :--- | :--- |
-| **Tesseract** | LSTM-based (Traditional) | Most widely used, extensive language support, battle-tested. | Clean, high-quality digital documents. |
-| **EasyOCR** | CNN + RNN (CRNN) | Simple to install and use, good multilingual support (80+ languages). | Quick text extraction from images and scanned documents. |
-| **PaddleOCR** | PP-OCR (Deep Learning) | Excellent for multilingual and layout-aware OCR, fast, optimized for real-time. | Documents with complex layouts, multi-language text. |
-| **RapidOCR** | ONNXRuntime/OpenVINO | Multi-platform, highly portable, and fast. | Edge devices, lightweight applications, cross-platform deployment. |
+| **Tesseract** | LSTM-based | Most widely used, extensive language support. | Clean digital documents. |
+| **EasyOCR** | CRNN | Simple to use, 80+ languages supported. | Quick text extraction. |
+| **PaddleOCR** | PP-OCR | Excellent for multilingual and layout-aware OCR. | Complex layouts, multi-language. |
+| **RapidOCR** | ONNX/OpenVINO | Fast, portable, and lightweight. | Edge devices, cross-platform. |
+| **docTR** | Deep Learning | High-performing, accessible, PyTorch/TF support. | General OCR tasks. |
 
-### State-of-the-Art (SOTA) and Transformer-based Models
-
-These models, often built on the Transformer architecture, excel at complex document understanding, including layout analysis, table extraction, and handling noisy or handwritten text.
+### SOTA and Transformer-based Models
 
 | Model | Developer | Core Technology | Key Strengths |
 | :--- | :--- | :--- | :--- |
-| **Surya** | Datalab | Transformer-based | High-performance document OCR, layout analysis, and reading order detection. |
-| **Florence-2** | Microsoft | Vision-Language Model (VLM) | Unified model for various vision tasks, strong performance on complex document understanding. |
-| **Qwen2-VL** | Alibaba | Vision-Language Model (VLM) | SOTA performance, strong multimodal capabilities, good for complex layouts. |
-| **Chandra** | Datalab | Transformer-based | High-accuracy for complex documents (handwriting, tables, math), outputs structured data (Markdown/JSON). |
-| **Dolphin** | ByteDance | Vision-Encoder-Decoder | Universal document parsing, excellent at handling tables and formulas. |
-| **LightOnOCR** | LightOn AI | 1B-parameter VLM | Optimized for speed and efficiency, SOTA for its size on document understanding benchmarks. |
+| **Surya** | Datalab | Transformer | High-performance OCR and layout analysis. |
+| **Florence-2** | Microsoft | VLM | Unified model for vision tasks, strong OCR. |
+| **Qwen2-VL** | Alibaba | VLM | SOTA performance, strong multimodal capabilities. |
+| **GOT-OCR2.0** | UCAS | Transformer | Unified end-to-end model for diverse OCR tasks. |
+| **Nougat** | Meta AI | Transformer | Specialized for scientific PDFs and LaTeX. |
+| **MinerU** | OpenDataLab | LayoutLMv3 | High-quality PDF to Markdown/JSON conversion. |
+| **Marker** | Vik Paruchuri | Pipeline | Fast, high-accuracy PDF to Markdown. |
+| **MarkItDown** | Microsoft | Utility | Lightweight tool for converting various files to MD. |
 
 ## Repository Structure
 
-The repository is now structured with a dedicated folder for each OCR library/model, containing its specific code, requirements, and documentation.
+The repository is structured with a dedicated folder for each OCR library/model, containing its specific code, requirements, and documentation.
 
 ```
 awesome-ocr/
 ├── tesseract/
-│   ├── tesseract_ocr.py
-│   ├── requirements.txt
-│   └── README.md
 ├── easyocr/
-│   ├── easyocr_ocr.py
-│   ├── requirements.txt
-│   └── README.md
 ├── paddleocr/
-│   ├── paddleocr_ocr.py
-│   ├── requirements.txt
-│   └── README.md
 ├── surya/
-│   ├── surya_ocr.py
-│   ├── requirements.txt
-│   └── README.md
 ├── florence2/
-│   ├── florence2_ocr.py
-│   ├── requirements.txt
-│   └── README.md
 ├── qwen2vl/
-│   ├── qwen2vl_ocr.py
-│   ├── requirements.txt
-│   └── README.md
 ├── rapidocr/
-│   ├── rapidocr_ocr.py
-│   ├── requirements.txt
-│   └── README.md
+├── doctr/
+├── got-ocr2/
+├── nougat/
+├── mineru/
+├── marker/
+├── markitdown/
 ├── tests/
 │   ├── simple/
 │   ├── medium/
@@ -84,15 +68,15 @@ We have curated a set of test documents categorized by difficulty to provide a r
 
 | Category | Description | Files |
 | :--- | :--- | :--- |
-| **Simple** | Clean, digital-born documents with standard fonts and single-column layouts. Ideal for testing basic text recognition accuracy. | `sample_digital.pdf` |
-| **Medium** | Scanned documents, multi-column layouts, and clear tables. Used to test layout analysis and structured data extraction capabilities. | `scanned_image.pdf`, `table_1.png`, `table_2.png` |
-| **Hard** | Low-quality scans, complex forms, and challenging handwritten text. Designed to push the limits of SOTA models. | `handwriting_1.jpg`, `handwriting_2.jpg`, `messy_form.png`, `complex_doc.png` |
+| **Simple** | Clean, digital-born documents. | `sample_digital.pdf` |
+| **Medium** | Scanned documents, multi-column layouts, tables. | `scanned_image.pdf`, `table_1.png`, `table_2.png` |
+| **Hard** | Low-quality scans, complex forms, handwriting. | `handwriting_1.jpg`, `handwriting_2.jpg`, `messy_form.png`, `complex_doc.png` |
 
 ## Setup and Installation
 
 ### Prerequisites
 *   Python 3.8+
-*   For Tesseract, the Tesseract OCR engine must be installed on your system (e.g., `sudo apt install tesseract-ocr`).
+*   System-level dependencies (e.g., `tesseract-ocr` for Tesseract).
 
 ### Installation
 1.  **Clone the repository:**
@@ -100,28 +84,17 @@ We have curated a set of test documents categorized by difficulty to provide a r
     git clone https://github.com/your-username/awesome-ocr.git
     cd awesome-ocr
     ```
-2.  **Install Python dependencies for a specific model:**
-    Navigate to the model's directory and install its specific requirements.
+2.  **Install dependencies for a specific model:**
     ```bash
-    cd tesseract
+    cd <model_folder>
     pip install -r requirements.txt
     ```
-    *Note: Installing dependencies for large VLM models (Florence-2, Qwen2-VL) may require a powerful machine and significant time.*
 
 ## Usage
 
-To run an example, navigate to the model's directory and pass the path to a test document (relative to the repository root) to the corresponding script.
-
-**Example: Running EasyOCR on a Medium-difficulty document**
+Navigate to the model's directory and run the script with a test document path.
 
 ```bash
 cd easyocr
 python easyocr_ocr.py ../tests/medium/table_1.png
-```
-
-**Example: Running PaddleOCR on a Hard-difficulty document**
-
-```bash
-cd paddleocr
-python paddleocr_ocr.py ../tests/hard/handwriting_1.jpg
 ```

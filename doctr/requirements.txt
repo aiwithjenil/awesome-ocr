@@ -1,0 +1,4 @@
+python-doctr[torch]
+# or python-doctr[tf] for TensorFlow
+torch
+torchvision
