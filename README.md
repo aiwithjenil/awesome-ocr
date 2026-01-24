@@ -22,6 +22,10 @@ The field of OCR has evolved significantly, moving from rule-based systems to de
 | **PaddleOCR** | PP-OCR | Excellent for multilingual and layout-aware OCR. | Complex layouts, multi-language. |
 | **RapidOCR** | ONNX/OpenVINO | Fast, portable, and lightweight. | Edge devices, cross-platform. |
 | **docTR** | Deep Learning | High-performing, accessible, PyTorch/TF support. | General OCR tasks. |
+| **Kraken** | Deep Learning | Optimized for historical and non-Latin scripts. | Historical documents. |
+| **Calamari** | Deep Learning | High performance on historical documents. | Academic/Historical research. |
+| **GOCR** | Feature Extraction | Classic open-source engine, lightweight. | Simple, high-contrast text. |
+| **GNU Ocrad** | Feature Extraction | Classic GNU tool, lightweight. | Simple text recognition. |
 
 ### SOTA and Transformer-based Models
 
@@ -35,6 +39,10 @@ The field of OCR has evolved significantly, moving from rule-based systems to de
 | **MinerU** | OpenDataLab | LayoutLMv3 | High-quality PDF to Markdown/JSON conversion. |
 | **Marker** | Vik Paruchuri | Pipeline | Fast, high-accuracy PDF to Markdown. |
 | **MarkItDown** | Microsoft | Utility | Lightweight tool for converting various files to MD. |
+| **TrOCR** | Microsoft | Transformer | End-to-end Transformer-based OCR. |
+| **Donut** | Naver | Transformer | OCR-free document understanding. |
+| **LayoutLMv3** | Microsoft | Transformer | Multi-modal Transformer for Document AI. |
+| **olmOCR** | AI2 | LLM-based | Clean text extraction from noisy scans. |
 
 ## Repository Structure
 
@@ -55,6 +63,14 @@ awesome-ocr/
 ├── mineru/
 ├── marker/
 ├── markitdown/
+├── trocr/
+├── donut/
+├── layoutlmv3/
+├── kraken/
+├── calamari/
+├── gocr/
+├── ocrad/
+├── olmocr/
 ├── tests/
 │   ├── simple/
 │   ├── medium/
@@ -76,7 +92,7 @@ We have curated a set of test documents categorized by difficulty to provide a r
 
 ### Prerequisites
 *   Python 3.8+
-*   System-level dependencies (e.g., `tesseract-ocr` for Tesseract).
+*   System-level dependencies (e.g., `tesseract-ocr` for Tesseract, `gocr` for GOCR).
 
 ### Installation
 1.  **Clone the repository:**
