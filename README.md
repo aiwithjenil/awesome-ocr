@@ -43,6 +43,9 @@ The field of OCR has evolved significantly, moving from rule-based systems to de
 | **Donut** | Naver | Transformer | OCR-free document understanding. |
 | **LayoutLMv3** | Microsoft | Transformer | Multi-modal Transformer for Document AI. |
 | **olmOCR** | AI2 | LLM-based | Clean text extraction from noisy scans. |
+| **DeepSeek-OCR** | DeepSeek-AI | VLM | SOTA document understanding and compression. |
+| **MiniCPM-V** | OpenBMB | MLLM | Efficient end-side multimodal LLM for OCR. |
+| **InternVL** | OpenGVLab | VLM | Large-scale vision-language foundation model. |
 
 ## Repository Structure
 
@@ -71,6 +74,9 @@ awesome-ocr/
 ├── gocr/
 ├── ocrad/
 ├── olmocr/
+├── deepseek-ocr/
+├── minicpm-v/
+├── internvl/
 ├── tests/
 │   ├── simple/
 │   ├── medium/
@@ -92,7 +98,7 @@ We have curated a set of test documents categorized by difficulty to provide a r
 
 ### Prerequisites
 *   Python 3.8+
-*   System-level dependencies (e.g., `tesseract-ocr` for Tesseract, `gocr` for GOCR).
+*   System-level dependencies (e.g., `tesseract-ocr` for Tesseract).
 
 ### Installation
 1.  **Clone the repository:**
