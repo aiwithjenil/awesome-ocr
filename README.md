@@ -46,6 +46,10 @@ The field of OCR has evolved significantly, moving from rule-based systems to de
 | **DeepSeek-OCR** | DeepSeek-AI | VLM | SOTA document understanding and compression. |
 | **MiniCPM-V** | OpenBMB | MLLM | Efficient end-side multimodal LLM for OCR. |
 | **InternVL** | OpenGVLab | VLM | Large-scale vision-language foundation model. |
+| **LLaVA-NeXT** | LLaVA | VLM | Improved reasoning and OCR capabilities. |
+| **VILA** | NVIDIA/MIT | VLM | Efficient vision-language model for edge devices. |
+| **H2OVL-Mississippi** | H2O.ai | VLM | Optimized for document understanding and extraction. |
+| **Moondream2** | Vikhyat | VLM | Tiny but capable vision-language model. |
 
 ## Repository Structure
 
@@ -77,6 +81,10 @@ awesome-ocr/
 ├── deepseek-ocr/
 ├── minicpm-v/
 ├── internvl/
+├── llava-next/
+├── vila/
+├── h2ovl-mississippi/
+├── moondream2/
 ├── tests/
 │   ├── simple/
 │   ├── medium/
