@@ -26,6 +26,7 @@ The field of OCR has evolved significantly, moving from rule-based systems to de
 | **Calamari** | Deep Learning | High performance on historical documents. | Academic/Historical research. |
 | **GOCR** | Feature Extraction | Classic open-source engine, lightweight. | Simple, high-contrast text. |
 | **GNU Ocrad** | Feature Extraction | Classic GNU tool, lightweight. | Simple text recognition. |
+| **Umi-OCR** | PaddleOCR-based | User-friendly GUI and HTTP API. | Desktop automation, easy integration. |
 
 ### SOTA and Transformer-based Models
 
@@ -43,13 +44,15 @@ The field of OCR has evolved significantly, moving from rule-based systems to de
 | **Donut** | Naver | Transformer | OCR-free document understanding. |
 | **LayoutLMv3** | Microsoft | Transformer | Multi-modal Transformer for Document AI. |
 | **olmOCR** | AI2 | LLM-based | Clean text extraction from noisy scans. |
-| **DeepSeek-OCR** | DeepSeek-AI | VLM | SOTA document understanding and compression. |
+| **DeepSeek-OCR2** | DeepSeek-AI | VLM | SOTA document understanding and compression. |
 | **MiniCPM-V** | OpenBMB | MLLM | Efficient end-side multimodal LLM for OCR. |
 | **InternVL** | OpenGVLab | VLM | Large-scale vision-language foundation model. |
 | **LLaVA-NeXT** | LLaVA | VLM | Improved reasoning and OCR capabilities. |
 | **VILA** | NVIDIA/MIT | VLM | Efficient vision-language model for edge devices. |
 | **H2OVL-Mississippi** | H2O.ai | VLM | Optimized for document understanding and extraction. |
 | **Moondream2** | Vikhyat | VLM | Tiny but capable vision-language model. |
+| **CogVLM2** | THUDM | VLM | Visual expert architecture for deep multimodal integration. |
+| **GLM-4V** | THUDM | VLM | Versatile model for high-resolution OCR and charts. |
 
 ## Repository Structure
 
@@ -78,13 +81,16 @@ awesome-ocr/
 ├── gocr/
 ├── ocrad/
 ├── olmocr/
-├── deepseek-ocr/
+├── deepseek-ocr2/
 ├── minicpm-v/
 ├── internvl/
 ├── llava-next/
 ├── vila/
 ├── h2ovl-mississippi/
 ├── moondream2/
+├── cogvlm2/
+├── glm-4v/
+├── umi-ocr/
 ├── tests/
 │   ├── simple/
 │   ├── medium/
